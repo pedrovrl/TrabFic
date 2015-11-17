@@ -26,7 +26,7 @@ public class AtividadeDao {
     }
     
     public int adiciona(Atividade atividade) {
-        String sql = "INSERT INTO dtc_atividade (ativ_nome, ativ_tipo) values (?, ?)";
+        String sql = "INSERT INTO dtc_atividade (ativ_nome, ativ_tipo, ativ_valor, professor_fk_id) values (?, ?, ?, ?)";
         try {
             //preparando o statement para inserção
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -34,6 +34,8 @@ public class AtividadeDao {
             //setando valores
             stmt.setString(1, atividade.getAtivNome());
             stmt.setInt(2, atividade.getAtivTipo());
+            stmt.setDouble(3, atividade.getAtivValor());
+            stmt.setInt(4, atividade.getAtivProfId());
             
             // executa
             stmt.execute();
@@ -107,6 +109,8 @@ public class AtividadeDao {
                 
                 atividade.setAtivNome(rs.getString("ativ_nome"));
                 atividade.setAtivTipo(rs.getInt("ativ_tipo"));
+                atividade.setAtivValor(rs.getDouble("ativ_valor"));
+                atividade.setAtivProfId(rs.getInt("ativ_profid"));
                 
                 atividades.add(atividade);
             }

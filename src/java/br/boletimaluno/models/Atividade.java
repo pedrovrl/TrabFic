@@ -13,6 +13,8 @@ public class Atividade {
     private int ativ_id;
     private String ativ_nome;
     private int ativ_tipo;
+    private int ativ_valor;
+    private int ativ_profid;
     
     public int getAtiv_id() {
         return ativ_id;
@@ -36,5 +38,21 @@ public class Atividade {
     
     public void setAtivTipo(int ativ_tipo) {
         this.ativ_tipo = ativ_tipo;
+    }
+
+    public double getAtivValor() {
+         return ativ_valor;
+    }
+
+    public int getAtivProfId() {
+        return ativ_profid;
+    }
+
+    public void setAtivValor(double aDouble) {
+         this.ativ_valor = ativ_valor;
+    }
+
+    public void setAtivProfId(int aInt) {
+         this.ativ_profid = ativ_profid;
     }
 }
