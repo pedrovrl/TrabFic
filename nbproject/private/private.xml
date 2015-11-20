@@ -5,15 +5,15 @@
         <group>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/index.jsp</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/servlets/AlunoAtividadeDao.java</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/servlets/ManterAluno.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/dao/ProfessorDao.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/dao/AlunoDao.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/css/main.css</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/principal.html</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/login.html</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/js/main.js</file>
-            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/servlets/login.java</file>
-            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/servlets/manterAluno.java</file>
             <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Pedro/Documents/NetBeansProjects/BoletimAluno/TrabFic/src/java/br/boletimaluno/servlets/Login.java</file>
         </group>
     </open-files>
 </project-private>

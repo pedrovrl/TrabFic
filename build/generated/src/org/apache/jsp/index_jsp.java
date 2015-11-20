@@ -53,7 +53,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        <h1>Hello World!</h1>\n");
       out.write("        ");
-      out.print( session.getAttribute("profid"));
+ if(session.getAttribute("profid")==null){response.sendRedirect("login.html");}else{response.sendRedirect("gerenciar.jsp");};
       out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");

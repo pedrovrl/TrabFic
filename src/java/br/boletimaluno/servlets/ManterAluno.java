@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Pedro
  */
-public class manterAluno extends HttpServlet {
+public class ManterAluno extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
