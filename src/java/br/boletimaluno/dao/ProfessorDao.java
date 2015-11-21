@@ -23,7 +23,7 @@ public class ProfessorDao {
     }
     
     public void adiciona(Professor professor) {
-        String sql = "INSERT INTO dtc_professor (nome, senha) values (?, ?, ?)";
+        String sql = "INSERT INTO dtc_professor (nome, senha) values (?, ?)";
         try {
             //preparando o statement para inserção
             PreparedStatement stmt = connection.prepareStatement(sql);

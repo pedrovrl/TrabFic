@@ -6,7 +6,7 @@ $("login").ready(function(){
 
 function funcLogin(){
         
-    var form = $("form");
+    var form = $("#login");
       
         console.log(form);
         var nome = form.find('.nome').val();
@@ -24,5 +24,31 @@ function funcLogin(){
         });
 }
 /*  login  */
+
+function registerTeacher(){
+     var form = $("#register");
+      
+        var nome = form.find('.nome').val();
+        var pass = form.find('.senha').val();
+        var passConfirmation = form.find('.senha_confirma').val();
+        var parametros = { nome: nome, password: pass};
+        
+        if (pass == passConfirmation) {
+            $.ajax({
+                method: "POST",
+                url: "login",
+                dataType: "JSON",
+                data: parametros,
+                complete: function (jqXHR, textStatus) {
+                    alert( jqXHR.responseText );
+                }   
+                
+            });
+        } else {
+            alert("erro");
+        }
+        alert(parametros);
+        
+}
 
 

@@ -5,6 +5,7 @@
  */
 package br.boletimaluno.servlets;
 
+import br.boletimaluno.dao.AlunoAtividadeDao;
 import br.boletimaluno.dao.AlunoDao;
 import br.boletimaluno.dao.AtividadeDao;
 import br.boletimaluno.models.Aluno;

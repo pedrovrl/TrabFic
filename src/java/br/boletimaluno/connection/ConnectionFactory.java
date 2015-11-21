@@ -21,12 +21,15 @@ public class ConnectionFactory {
      try {
          
          // deve mudar o login/senha do postgres para o mesmo funcionar
-         String url = "jdbc:postgresql://localhost:5432/BoletimVirtual";
-         Properties props = new Properties();
-         props.setProperty("user","postgres");
-         props.setProperty("password","p2093v");
+         String driver = "org.postgresql.Driver";  
+         String url = "jdbc:postgresql://localhost:5432/BoletimAluno";
+         String user = "postgres";
+         String pass = "soeusei";
+         //Properties props = new Properties();
+         //props.setProperty("user","postgres");
+         //props.setProperty("password","soeusei");
          
-         Connection conn = DriverManager.getConnection(url, props);
+         Connection conn = DriverManager.getConnection(url, user, pass);
          return conn;
      } catch (SQLException e) {
          throw new RuntimeException(e);
