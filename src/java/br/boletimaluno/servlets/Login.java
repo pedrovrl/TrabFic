@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             String path = request.getServletPath();
-            if (path.equals("login.act")) {
+           
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -44,6 +44,7 @@ public class Login extends HttpServlet {
             out.println("<h1>Servlet login at " + request.getParameter("nome") + "</h1>");
             out.println("</body>");
             out.println("</html>");
+            
         }
     }
 
@@ -87,4 +88,4 @@ public class Login extends HttpServlet {
     }// </editor-fold>
 
     }
-}
+

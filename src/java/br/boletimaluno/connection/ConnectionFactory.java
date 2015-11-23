@@ -24,7 +24,7 @@ public class ConnectionFactory {
          String driver = "org.postgresql.Driver";  
          String url = "jdbc:postgresql://localhost:5432/BoletimAluno";
          String user = "postgres";
-         String pass = "soeusei";
+         String pass = "p2093v";
          //Properties props = new Properties();
          //props.setProperty("user","postgres");
          //props.setProperty("password","soeusei");
