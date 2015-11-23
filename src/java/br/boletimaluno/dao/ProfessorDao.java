@@ -22,6 +22,21 @@ public class ProfessorDao {
         this.connection = new ConnectionFactory().getConnection();
     }
     
+    public void autentifica(Professor professor){
+        String sql = "SELECT FROM dtc_professor WHERE professor_id=?";
+        
+        try{
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            
+            stmt.setInt(1, professor.getProfId());
+            
+            stmt.execute();
+            stmt.close();
+        } catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+    
     public void adiciona(Professor professor) {
         String sql = "INSERT INTO dtc_professor (nome, senha) values (?, ?)";
         try {
