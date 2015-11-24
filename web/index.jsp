@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <% if(session.getAttribute("profid")==null){response.sendRedirect("login.html");}else{response.sendRedirect("gerenciar.jsp");};%>
+        <%  if(session.getAttribute("profid")==null){response.sendRedirect("login.jsp");}else{response.sendRedirect("principal.html");};%>
     </body>
 </html>

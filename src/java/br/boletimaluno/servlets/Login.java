@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -33,18 +34,19 @@ public class Login extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             String path = request.getServletPath();
-           
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet login at " + request.getParameter("nome") + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-            
+            if( "login".equals(request.getParameter("tipo"))){  
+                HttpSession session = request.getSession();
+                session.setMaxInactiveInterval(10000);
+                /* TODO output your page here. You may use following sample code. */
+                //if("nome".equals("pedro") && "senha".equals("1234")){
+                    session.setAttribute("profid","pedro");
+                //}
+            }
+            if( "logout".equals(request.getParameter("logout"))){  
+                HttpSession session = request.getSession();
+                out.println("<a href='cadastrar.html'>Voltar</a>");
+                session.invalidate();
+            }
         }
     }
 
