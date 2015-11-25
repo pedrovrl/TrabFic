@@ -3,19 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/index.jsp</file>
             <file>file:/C:/Users/Usuario/Documents/TrabFic/web/js/main.js</file>
+            <file>file:/C:/Users/Usuario/Documents/TrabFic/src/java/br/boletimaluno/dao/ProfessorDao.java</file>
             <file>file:/C:/Users/Usuario/Documents/TrabFic/src/java/br/boletimaluno/servlets/ManterAluno.java</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/principal.html</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/cadastrarAtividade.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/cadastrar.html</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/excluir.jsp</file>
             <file>file:/C:/Users/Usuario/Documents/TrabFic/src/java/br/boletimaluno/servlets/Login.java</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/login.jsp</file>
             <file>file:/C:/Users/Usuario/Documents/TrabFic/web/gerenciar.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/alterar.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/css/main.css</file>
+            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/principal.html</file>
+            <file>file:/C:/Users/Usuario/Documents/TrabFic/src/java/br/boletimaluno/dao/AlunoDao.java</file>
+            <file>file:/C:/Users/Usuario/Documents/TrabFic/web/cadastrarAtividade.jsp</file>
         </group>
     </open-files>
 </project-private>

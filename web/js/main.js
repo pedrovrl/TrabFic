@@ -15,9 +15,9 @@
                 url: "login",
                 dataType: "JSON",
                 data: parametros,
-                complete: function (jqXHR, textStatus) {
+                success: function (jqXHR, textStatus) { 
                     window.location = "index.jsp";
-                }         
+                }
             });
     }
     /*  login  */

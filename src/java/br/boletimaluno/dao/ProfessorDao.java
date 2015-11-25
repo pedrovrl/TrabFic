@@ -9,6 +9,7 @@ import br.boletimaluno.connection.ConnectionFactory;
 import br.boletimaluno.models.Professor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -22,18 +23,24 @@ public class ProfessorDao {
         this.connection = new ConnectionFactory().getConnection();
     }
     
-    public void autentifica(Professor professor){
-        String sql = "SELECT FROM dtc_professor WHERE professor_id=?";
-        
-        try{
-            PreparedStatement stmt = connection.prepareStatement(sql);
+    public int select(String nome, String senha) throws SQLException{
+        try 
+        {
+            int profid = 0;
+            PreparedStatement stmt = this.connection.
+                    prepareStatement("select * from dtc_professor where nome='"+nome+"' and senha='"+senha+"'");
+            ResultSet rs = stmt.executeQuery();
             
-            stmt.setInt(1, professor.getProfId());
-            
-            stmt.execute();
+            if (rs.next()){
+                profid = rs.getInt("professor_id");
+            }
             stmt.close();
-        } catch (SQLException e){
-            throw new RuntimeException(e);
+            
+            return profid;
+        }
+        catch (SQLException e) 
+        {
+                throw new RuntimeException(e);
         }
     }
     
