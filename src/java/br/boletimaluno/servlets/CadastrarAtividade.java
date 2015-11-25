@@ -5,25 +5,20 @@
  */
 package br.boletimaluno.servlets;
 
-import br.boletimaluno.dao.ProfessorDao;
-import br.boletimaluno.models.Professor;
+import br.boletimaluno.dao.AtividadeDao;
+import br.boletimaluno.models.Atividade;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Pedro
+ * @author Usuario
  */
-public class Login extends HttpServlet {
+public class CadastrarAtividade extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,38 +30,30 @@ public class Login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String path = request.getServletPath();
-            if( "login".equals(request.getParameter("tipo"))){  
-                ProfessorDao dao = new ProfessorDao();   
-                String nome = request.getParameter("nome");
-                String senha = request.getParameter("senha");
-                out.println(senha);
-                int profid = dao.select(nome,senha);
-                
-                    if(profid > 0){
-                    HttpSession session = request.getSession();
-                    session.setMaxInactiveInterval(10000);
-                    session.setAttribute("profid",profid);
-                    }
-            }
-            if( "tipo".equals(request.getParameter("registro"))){  
-               Professor professor = new Professor();
-               String prof_nome = request.getParameter("nome");
-               String prof_senha = request.getParameter("password");
-               professor.setProfNome(prof_nome);
-               professor.setProfSenha(prof_senha);
-               ProfessorDao dao = new ProfessorDao();
-               dao.adiciona(professor);           
-            }
-            if( "logout".equals(request.getParameter("logout"))){  
-                HttpSession session = request.getSession();
-                session.invalidate();
-            }
-            
+            String ativ_nome = request.getParameter("ativ_nome");
+            String ativ_nota = request.getParameter("ativ_nota");
+            String ativ_tipo = request.getParameter("ativ_tipo");
+            String prof_id = request.getParameter("prof_id");
+           
+            Atividade atividade = new Atividade();
+            atividade.setAtivNome(ativ_nome);
+            atividade.setAtivProfId(Integer.parseInt(prof_id));
+            atividade.setAtivTipo(Integer.parseInt(ativ_tipo));
+            atividade.setAtivValor(Double.parseDouble(ativ_nota));
+            AtividadeDao dao = new AtividadeDao();
+            dao.adiciona(atividade);
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet CadastrarAtividade</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Atividade  , inserida com sucesso!</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
@@ -82,11 +69,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -100,11 +83,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -117,5 +96,4 @@ public class Login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    }
-
+}

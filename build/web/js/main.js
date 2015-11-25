@@ -23,11 +23,11 @@
     /*  login  */
 
     function registerTeacher(){
-         var form = $("#register");
+            var form = $("#register");
             var nome = form.find('.nome').val();
             var pass = form.find('.senha').val();
             var passConfirmation = form.find('.senha_confirma').val();
-            var parametros = { nome: nome, password: pass};
+            var parametros = { nome: nome, password: pass, tipo: "registro"};
             if (pass == passConfirmation) {
                 $.ajax({
                     method: "POST",
@@ -35,14 +35,13 @@
                     dataType: "JSON",
                     data: parametros,
                     complete: function (jqXHR, textStatus) {
-                        alert( jqXHR.responseText );
-                    }   
+                alert( jqXHR.responseText );
+            } 
 
                 });
             } else {
                 alert("erro");
             }
-            alert(parametros);
     }
 $(document).ready(function(){
     $('.logout').click(function(e){

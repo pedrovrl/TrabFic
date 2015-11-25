@@ -52,7 +52,7 @@
             <h4 class="title">Cadastro de Atividades</h4> <hr/>
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <form role="form" action="cadastrarAtividade.act" method="POST">
+                <form role="form" action="CadastrarAtividade" method="POST">
                     <div class="form-group">
                         <label for="text">Tipo de Atividade: </label>
                           <select class="form-control" name="ativ_tipo">
@@ -64,14 +64,14 @@
                     
                     <div class="form-group">
                         <label for="text">Nome da Atividade: </label>
-                          <input type="text" class="form-control" name="ativ_nome">
+                          <input type="text" class="form-control " name="ativ_nome">
                     </div>
                     
                     <div class="form-group">
                         <label for="text">Nota:</label>
-                          <input type="text" class="form-control" name="nota">
+                          <input type="text" class="form-control" name="ativ_nota">
                     </div>
-                    <input type="hidden" name="alun_id" value=<%= request.getParameter("id") %> >
+                    <input type="hidden" class="" name="prof_id" value=<%= session.getAttribute("profid") %> >
                         <input type="submit" class="btn btn-default" value="Cadastrar" />
                  </form>
             </div>

@@ -82,15 +82,15 @@
                             <div class="alert alert-danger" role="alert" style="display: none"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></div>
                             <div style="margin-bottom: 25px" class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                              <input id="cadastro-login-username" type="text" class="form-control " name="nome" value="" placeholder="nome" required maxlength="100" pattern=".{5,}" title="5 caracteres no mínimo.">                                        
+                              <input id="cadastro-login-username" type="text" class="form-control nome" name="nome" value="" placeholder="nome" required maxlength="100" pattern=".{5,}" title="5 caracteres no mínimo.">                                        
                             </div>
                             <div style="margin-bottom: 25px" class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                              <input id="cadastro-login-password" type="password" class="form-control " name="senha" placeholder="senha" required maxlength="30" pattern=".{6,}" title="6 caracteres no mínimo.">
+                              <input id="cadastro-login-password" type="password" class="form-control senha" name="senha" placeholder="senha" required maxlength="30" pattern=".{6,}" title="6 caracteres no mínimo.">
                             </div>
                             <div style="margin-bottom: 25px" class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                              <input id="cadastro-login-password-repeat" type="password" class="form-control " name="senha_confirma" placeholder="confirme sua senha" required maxlength="30">
+                              <input id="cadastro-login-password-repeat" type="password" class="form-control senha_confirma" name="senha_confirma" placeholder="confirme sua senha" required maxlength="30">
                             </div>
                             <div style="margin-top:10px" class="form-group">
 
